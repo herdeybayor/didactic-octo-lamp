@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jola</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .nav__links {
+            @apply font-semibold hover:border-b-2 border-blue-500;
+          }
+
+          .nav__links--active {
+              @apply border-b-2 border-blue-500
+          }
+          .opacity__block {
+              margin-top: 0 !important;
+          }
+          .header__bg {
+              background: linear-gradient(to right, #00000070, #00000070), url(https://picsum.photos/1000/800);
+              background-size: cover;
+          }
+
+          .plan__box div {
+              @apply bg-blue-500 text-white rounded-xl aspect-video flex flex-col p-5 text-center space-x-5 justify-center items-center hover:-rotate-3 hover:-translate-y-2 transition-all duration-150 ease-in shadow-md
+          }
+
+          .plan__box div h1 {
+              @apply text-3xl font-semibold
+          }
+
+          .plan__box div p {
+              @apply text-xl
+          }
+        }
+      </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Home -->
+    <div class="flex flex-col relative">
+        <!-- Navbar -->
+        <nav
+            class="bg-white fixed w-full top-0 left-0 z-50 flex justify-between p-5 shadow-lg text-blue-500 items-center">
+            <h1 class="font-bold text-2xl">Jola Site</h1>
+            <ul class="flex space-x-10 text-md cursor-pointer items-center">
+                <li class="nav__links nav__links--active"><a href="/index.html"> HOME</a></li>
+                <li class="nav__links"><a href="/about.html"> ABOUT</a></li>
+                <li class="nav__links"><a href="/contact.html"> CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- Header -->
+        <section
+            class="flex-1 flex flex-col justify-center items-center text-blue-500 px-10 space-y-7 relative header__bg min-h-screen">
+            <!-- With image and div -->
+            <!-- <img class="w-full h-full absolute object-cover" src="https://picsum.photos/1000/800" alt="">
+            <div class="w-full h-full absolute bg-black/70 opacity__block"></div> -->
+            <h1 class="text-5xl font-bold text-center leading-normal z-10">
+                Welcome to the great Jola Site.
+            </h1>
+            <a class="bg-blue-500 px-4 py-2 font-medium text-xl rounded-full text-white hover:bg-blue-400 active:scale-125 transition-transform duration-200 ease-out z-10"
+                href="#about">About Us</a>
+        </section>
+
+        <!-- About -->
+        <section id="about"
+            class="bg-blue-500 flex flex-col p-10 md:flex-row items-center text-white space-y-10 md:space-y-0">
+            <div class="basis-1/2">
+                <h1 class="font-bold text-3xl">-We are the best</h1>
+                <ul class="list-disc text-md">
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </div>
+            <div class="basis-1/2 flex justify-center w-full">
+                <div class="w-4/5 aspect-square relative group overflow-hidden">
+                    <div class="w-full aspect-square rounded-xl shadow-xl overflow-hidden">
+                        <img class="w-full h-full" src="https://picsum.photos/400/400" alt="">
+                        <div
+                            class="w-full h-full bg-white absolute top-0 -right-full rounded-xl group-hover:right-0 transition-all duration-300 ease-out flex justify-center items-center">
+                            <h1 class="text-4xl text-black font-bold">Hello World!</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Plan -->
+        <section class="p-10 space-y-10">
+            <h1 class="text-blue-500 font-bold text-3xl text-center">Our Plan</h1>
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-10">
+                <div class="plan__box">
+                    <div>Eat</div>
+                </div>
+                <div class="plan__box">
+                    <div>
+                        <h1>Drink</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, voluptatibus.</p>
+                    </div>
+
+                </div>
+                <div class="plan__box">
+                    <div>Poo</div>
+                </div>
+                <div class="plan__box">
+                    <div>Sleep</div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
